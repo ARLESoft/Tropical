@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tropical Concept</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/4b9ba14f3f.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #4b4b4b;
+        }
+
+         .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      padding: 16px 24px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    
+    .show {
+      display: block;
+    }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            height: 500px;
+        }
+        .hero-img-1 { grid-area: 1 / 1 / 3 / 2; }
+        .hero-img-2 { grid-area: 1 / 2 / 2 / 3; }
+        .hero-img-3 { grid-area: 2 / 2 / 3 / 3; }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-shadow-custom {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .why-us-icon {
+            font-size: 2.5rem;
+            color: #f6f5f3;
+        }
+        
+        .services-banner {
+            background-color: #f3f4f6;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+        .services-banner .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           background-color: #34393E;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0 10px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .relooking-section .left-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .relooking-section .image-stack {
+            position: relative;
+        }
+        .relooking-section .image-stack img:first-child {
+            position: relative;
+            z-index: 2;
+        }
+        .relooking-section .image-stack img:last-child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social-icons .icon-circle {
+            background-color: white;
+            color: #4b4b4b;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .footer-social-icons .icon-circle:hover {
+            background-color: #f6f5f4;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                height: auto;
+            }
+            .hero-img-1 { grid-area: auto; }
+            .hero-img-2 { grid-area: auto; }
+            .hero-img-3 { grid-area: auto; }
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <header class="flex justify-between items-center py-6 px-8 text-[#4b4b4b] font-medium">
+        <div class="text-xl tracking-wider"><a href="index.html">TROPICAL CONCEPT</a></div>
+        <nav class="flex items-center">
+            <a href="prestation.html" class="hidden md:inline-block mx-4 hover:text-[#d8b87c] transition-colors">PRESTATIONS</a>
+            <a href="contact.html" class="hidden md:inline-block mx-4 hover:text-[#d8b87c] transition-colors">CONTACT</a>
+             <span class="mx-4">MENU</span>
+           <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Lien 1</a>
+      <a href="#">Lien 2</a>
+      <a href="#">Lien 3</a>
+    </div>
+  </div>
+        </nav>
+    </header>
+
+   <section class="hero flex justify-center items-center gap-5 p-10 relative">
+        <img src="image/Rectangle 11.png" alt="" class="w-1/4 rounded-lg object-cover">
+        <img src="image/Rectangle 17.png" alt="" class="w-1/4 rounded-lg object-cover">
+        <img src="image/Rectangle 20.png" alt="" class="w-1/4 rounded-lg object-cover">
+        <img src="image/Rectangle 14.png" alt="" class="w-1/4 rounded-lg object-cover">
+        <img src="image/Rectangle 19.png" alt="" class="w-1/4 rounded-lg object-cover">
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white text-center text-shadow-custom">Nos<br>prestations</h1>
+        </div>
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 p-2 rounded-full bg-black shadow-lg cursor-pointer hover:bg-gray-100 transition-colors">
+            <i class="fa-solid fa-arrow-down text-lg text-[#fcfcf6]"></i>
+        </div>
+    </section>
+
+    <section class="py-16 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <h2 class="text-4xl md:text-5xl font-light text-[#4b4b4b] mb-12 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-[#d8b87c]">VISITE-CONSEILS</h2>
+            <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 text-lg">
+                    <p class="mb-6">Il s'agit d'un rendez-vous à domicile au cours duquel nous échangeons sur votre projet, vos envies, de ce qui est réalisable ou non. Vous êtes conseillé sur la meilleure manière d'optimiser votre espace pour le mettre en valeur.</p>
+                    <p class="mb-6">À la suite de cet entretien, un compte-rendu détaillé de la visite (écrit & graphique) vous sera transmis par e-mail.</p>
+                    <h3 class="font-bold text-xl mb-4">TARIFS :</h3>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li><span class="font-bold">RDV-Conseils sur place</span></li>
+                        <li><span class="font-bold">Compte-rendu détaillé de la visite</span></li>
+                    </ul>
+                    <p class="mb-2">La mission est facturée <strong>195 € TTC</strong> pour 1 heure de visite.</p>
+                    <p class="text-sm text-gray-500">(puis 90€ la demi-heure supplémentaire)</p>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="image/Rectangle 5.png" alt="Visite conseil" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-8 md:px-16 bg-[#f3f4f6]">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-light mb-4">Pourquoi nous choisir ?</h2>
+            <p class="text-lg text-gray-600 mb-12">Faites le Choix de l'Excellence avec Tropical Concept</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-[#34393E] p-8 rounded-lg text-center shadow-lg flex flex-col items-center justify-center">
+                    <div class="why-us-icon mb-4"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="font-bold mb-3 text-white">Expertise Diversifiée</h3>
+                    <p class="text-sm text-white">Bénéficiez de l'expertise diversifiée de notre équipe pluridisciplinaire garantissant une approche complète et innovante pour chaque projet.</p>
+                </div>
+                <div class="bg-[#34393E] p-8 rounded-lg text-center shadow-lg flex flex-col items-center justify-center">
+                    <div class="why-us-icon mb-4"><i class="fa-solid fa-leaf"></i></div>
+                    <h3 class="font-bold mb-3 text-white">Approche Respectueuse de l'Environnement</h3>
+                    <p class="text-sm text-white">Nous adoptons une approche respectueuse de l'environnement, en privilégiant des solutions qui minimisent notre empreinte écologique.</p>
+                </div>
+                <div class="bg-[#34393E] p-8 rounded-lg text-center shadow-lg flex flex-col items-center justify-center">
+                    <div class="why-us-icon mb-4"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3 class="font-bold mb-3 text-white">Personnalisation et Créativité</h3>
+                    <p class="text-sm text-white">La personnalisation est au cœur de notre démarche. Nous concevons des œuvres uniques répondant à vos besoins les plus spécifiques.</p>
+                </div>
+                <div class="bg-[#34393E] p-8 rounded-lg text-center shadow-lg flex flex-col items-center justify-center">
+                    <div class="why-us-icon mb-4"><i class="fa-solid fa-handshake"></i></div>
+                    <h3 class="font-bold mb-3 text-white">Engagement envers la Satisfaction Client</h3>
+                    <p class="text-sm text-white">Parce que votre satisfaction est notre priorité absolue, nous nous engageons à vous fournir un service de qualité irréprochable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-light text-[#4b4b4b] mb-12 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-[#d8b87c] text-center">Nos prestations</h2>
+            <div class="services-banner rounded-lg overflow-hidden shadow-lg">
+                <div class="item">
+                    <h3 class="font-bold text-lg absolute text-white">Relooking/Décoration</h3>
+                    <img src="image/Rectangle 9.png" alt="" class="mb-2 w-full rounded">
+                </div>
+                <div class="item">
+                    <h3 class="font-bold text-lg absolute text-white">Architecture d'intérieur</h3>
+                    <img src="image/Rectangle 10.png" alt="" class="mb-2 w-full rounded">
+                </div>
+                <div class="item">
+                    <h3 class="font-bold text-lg absolute text-white">Conception architecturale</h3>
+                    <img src="image/Rectangle 25.png" alt="" class="mb-2 w-full rounded">
+                </div>
+                <div class="item">
+                    <h3 class="font-bold text-lg absolute text-white">Recherche d'artisans</h3>
+                    <img src="image/Rectangle 12.png" alt="" class="mb-2 w-full rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-16 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto relooking-section">
+            <div class="flex flex-col-reverse lg:flex-row items-start gap-12">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-light mb-8">RELOOKING /<br>DÉCORATION</h2>
+                    <div class="image-stack mb-12">
+                        <img src="image/Rectangle 26.png" alt="Relooking" class="w-full h-80 object-cover rounded-lg">
+                        <img src="image/Rectangle 18.png" alt="Décoration" class="w-2/3 h-64 object-cover rounded-lg">
+                    </div>
+                    <p class="mb-6">Cette prestation débute par un entretien qui nous permettra de comprendre quelles sont vos attentes et d'y répondre au mieux. Nous vous remettons ensuite un dossier complet qui vous permettra d'avoir une idée précise de votre nouvel intérieur pour qu'il vous corresponde parfaitement, ainsi que le listing des achats à effectuer.</p>
+                    <h3 class="text-2xl font-bold mb-4">Détails :</h3>
+                    <p class="italic text-gray-600 mb-6">Cette mission concerne les projets d'aménagement & de décoration sans toucher aux éléments d'architecture existants.</p>
+                    <ul class="list-disc pl-6 space-y-3 mb-8 text-sm">
+                        <li><strong>1ère visite sur place</strong> - état des lieux, cahier des charges clients, prise de cotes et reportage photo de votre intérieur</li>
+                        <li><strong>Plusieurs propositions d'aménagements</strong> - plans d'aménagement, vues perspectives en noir & blanc, planche tendance</li>
+                        <li><strong>Dossier du projet validé</strong> - ensembles des plans techniques, planches d'ambiances & matériaux, vues 3D couleurs</li>
+                        <li><strong>Budget estimatif travaux*</strong> - estimation non exhaustive du projet + liste shopping (en option)</li>
+                    </ul>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col items-center">
+                    <img src="image/Rectangle 27.png" alt="Projet" class="w-full h-[500px] object-cover rounded-lg shadow-lg mb-12">
+                    <div class="text-center w-full">
+                        <p class="mb-6 text-xl"><strong>Chaque mission peut en compléter une autre, et fait l'objet d'un devis qui pourra être ajusté.</strong><br>Pour obtenir un <strong><span class="text-[#d8b87c] font-bold">DEVIS GRATUIT</span></strong></p>
+                        <a href="contact.html" class="inline-block bg-[#4b4b4b] text-white px-12 py-4 rounded-full font-bold hover:bg-[#d8b87c] transition-colors">CONTACTEZ-NOUS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#34393E] text-white py-16 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-gray-600 pb-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <h2 class="text-3xl font-bold mb-4 leading-snug">Vous avez un projet-<br>Nous Vous aidons à le réaliser</h2>
+                    <p class="text-gray-400">#Design, #Concept, #Tropical</p>
+                </div>
+                <div class="col-span-1 lg:col-span-2 flex flex-col items-start lg:items-end">
+                    <p class="mb-4 text-gray-300">Inscrivez-vous et restez au coeur de l'actualité tendance grâce à la newsletter du MAG</p>
+                    <div class="flex flex-col sm:flex-row gap-4 w-full">
+                        <input type="email" placeholder="Mon adresse mail" class="flex-grow px-4 py-3 rounded text-white focus:outline-none focus:ring-2 focus:ring-[#d8b87c]">
+                        <button class="bg-white px-6 py-3 rounded font-bold text-black hover:bg-[#c4a66e] transition-colors">ENVOYER</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">NAVIGATION</h3>
+                    <ul class="text-gray-400 space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition-colors">ACCUEIL</a></li>
+                        <li><a href="prestation.html" class="hover:text-white transition-colors">PRESTATIONS</a></li>
+                        <li><a href="apropos.html" class="hover:text-white transition-colors">À PROPOS</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">CONTACT</a></li>
+                        <li><a href="mag.html" class="hover:text-white transition-colors">MAGAZINE</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">MENTIONS LÉGALES</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">PRESTATIONS</h3>
+                    <ul class="text-gray-400 space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">VISITE CONSEIL</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">RELOOKING/DÉCORATION</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">ARCHITECTURE D'INTÉRIEUR</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">CONCEPTION ARCHITECTURALE</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">RECHERCHE D'ARTISANS</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="text-lg font-bold mb-4">RÉSEAUX SOCIAUX</h3>
+                    <div class="footer-social-icons">
+                        <a href="#" class="icon-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="icon-circle"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center text-gray-500 text-sm">
+                <p>&copy;2024 TROPICAL CONCEPT, TOUS DROITS RÉSERVÉS</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
