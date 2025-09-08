@@ -1,11 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
 </head>
 <body>
+  
+<style>
+    body {
+      border: 8px solid #ffffff;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-900">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full text-white z-50">
+    <div class="flex justify-between items-center px-6 md:px-16 py-4">
+      <div class="text-lg font-bold tracking-wider">TROPICAL CONCEPT</div>
+      <nav class="hidden md:flex gap-8 font-semibold">
+        <a href="prestation.html" class="hover:text-green-400">Prestations</a>
+        <a href="contact.html" class="hover:text-green-400">Contact</a>
+        <a href="#menu" class="hover:text-green-400">Menu</a>
+      </nav>
+      <div id="burger" class="md:hidden text-3xl cursor-pointer">☰</div>
+   
+  </header>
+
+  <!-- HERO -->
+  <section class="relative h-screen flex items-center justify-center text-center text-white" 
+    style="background:url('image/img_acc.jpeg.jpg') center/cover no-repeat;">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">ENSEMBLE DONNONS VIE</h1>
+      <h2 class="italic text-2xl md:text-3xl mt-2">À VOTRE IMAGINATION</h2>
+      <button class="mt-6 bg-white text-black px-6 py-3 rounded font-bold hover:bg-gray-200 transition">
+        PRENDRE UN RDV
+      </button>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- TABLEAU -->
+  <div class="flex justify-center py-20">
+    <table class="w-11/12 md:w-10/12">
+      <tr>
+        <td class="align-top pr-8 w-1/2">
+          <h2 class="text-4xl md:text-5xl tracking-wide uppercase font-bold mb-6">
+            LAISSER <br>
+            <span class="italic font-light">L'INSPIRATION</span>
+          </h2>
+        </td>
+        <td class="align-top pl-8 w-1/2">
+          <img src="image/dessin1.jpeg.png" alt="Plan" class="w-full h-auto rounded-lg shadow-lg">
+        </td>
+      </tr>
+      <tr>
+        <td class="align-top pr-8 w-1/2">
+          <img src="image/dessin2.jpeg.png" alt="Inspiration" class="w-full h-auto rounded-lg shadow-lg">
+        </td>
+        <td class="align-top pl-8 w-1/2">
+          <h1 class="text-4xl md:text-5xl tracking-wide uppercase font-bold mb-6">
+            PRENDRE <span class="italic font-light">FORME</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+            Tropical Concept vous accompagne dans vos projets de : <br>
+            <strong>Rénovation - Construction - Valorisation locative - Aménagement intérieur</strong> aux Antilles.
+          </p>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+            Bénéficiez également d'une <strong>visite avec conseils personnalisés</strong> et croquis d'ambiance <br>
+            à partir de <strong>195€</strong>. Obtenez un devis gratuit :
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- PRESTATIONS -->
+  <section id="prestations" class="text-center px-6 md:px-16 py-20">
+    <h2 class="text-3xl font-bold">UNE PRESTATION QUI</h2>
+    <h3 class="italic text-gray-500 mb-10">S'ADAPTE À VOS BESOINS</h3>
+
+    <div class="grid gap-10 md:grid-cols-3">
+      <div class="bg-gray-100 rounded-lg shadow hover:shadow-xl transition overflow-hidden">
+        <img src="image/section1.jpeg.jpg" alt="Architecture" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold uppercase">ARCHITECTURE</h4>
+          <p class="text-gray-700">Concepts designs & Services sur-mesure, qu'il s'agisse q'un projet global <br>
+             ou d'un simple concept d'inspiration, nous mettons à votre disposition toute notre expertise pour vous <br>
+              aider à réaliser le projet de vos rêves.</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-100 rounded-lg shadow hover:shadow-xl transition overflow-hidden">
+        <img src="image/section2.jpeg.png" alt="Intérieur" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold uppercase">INTÉRIEUR</h4>
+          <p class="text-gray-700">Nous concevons des espaces personnalisés & uniques, <br>
+             mis en forme dans un dossier d'éléments <br>
+              descriptifs et graphiques pour mieux vous <br>
+               projeter : plans géométraux, croquis, planches d'ambiance & modélisation 3D. </p>
+        </div>
+      </div>
+
+      <div class="bg-gray-100 rounded-lg shadow hover:shadow-xl transition overflow-hidden">
+        <img src="image/section3.jpeg.png" alt="Espaces Pro" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold uppercase">ESPACES PRO</h4>
+          <p class="text-gray-700">Une valorisation & optimisation de vos locaux  <br>
+            ou hébergements touristiques créent une valeur ajoutée à votre activité et  <br>
+            vous apporte plus de visibilité sur le marché : faire la différence  <br>
+            pour se démarquer de la concurrence.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-12">
+      <button class="bg-gray-800 text-white px-8 py-3 rounded font-bold hover:opacity-90 transition">
+        DÉCOUVRIR NOS PRESTATIONS
+      </button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="grid md:grid-cols-2 min-h-[400px]">
+    <div class="relative flex items-center justify-center text-white px-6 py-16" 
+      style="background:url('image/der.jpeg.jpg') center/cover no-repeat;">
+      <div class="absolute inset-0 bg-black/70"></div>
+      <div class="relative text-center z-10">
+        <h2 class="text-3xl font-bold mb-4">Vous avez un projet</h2>
+        <p> n'hésitez pas à nous contacter par  <br>
+            téléphone ou envoyez-nous un e-mail <br>
+             en indiquant vos coordonnées.</p>
+      </div>
+    </div>
+    <div class="flex items-center justify-center bg-gray-100 px-6 py-16">
+      <form id="contactForm" class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md space-y-4">
+        <input type="text" placeholder="Nom" required class="w-full border p-3 rounded">
+        <input type="email" placeholder="Email" required class="w-full border p-3 rounded">
+        <input type="text" placeholder="Téléphone" class="w-full border p-3 rounded">
+        <textarea placeholder="Votre message" required class="w-full border p-3 rounded"></textarea>
+        <button type="submit" class="w-full bg-gray-800 text-white py-3 rounded font-bold hover:opacity-90">
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-gray-400 px-6 md:px-16 py-16">
+    <div class="grid md:grid-cols-3 gap-10">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Vous avez un projet <br>
+        nous aidions à le realisers</h2>
+
+        <h4 class="text-white font-bold mb-4">NAVIGATION</h4>
+        <ul class="space-y-2">
+            <li><a href="index.html"  class="hover:text-white">Accueil</a></li>
+          <li><a href="prestation.html" class="hover:text-white">Prestations</a></li>
+          <li><a href="apropos.html" class="hover:text-white">A PROPOS</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          <li><a href="mag.html" class="hover:text-white">Magazine</a></li>
+          <li><a href="#" class="hover:text-white">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4">PRESTATIONS</h4>
+        <ul class="space-y-2">
+          <li>Visite conseil</li>
+          <li>Relooking / Décoration</li>
+          <li>Architecture d’intérieur</li>
+          <li>Conception architecturale</li>
+          <li>Recherche d’artisans</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Inscrivez-vous et restez au coeur de l'actualité...</h5>
+        <div class="flex items-center space-x-2 mb-6">
+          <input type="email" placeholder="Mon adresse mail" class="flex-1 border p-2 rounded text-black">
+          <button class="bg-gray-800 text-white px-4 py-2 rounded font-semibold hover:opacity-90">
+            Envoyer
+          </button>
+        </div>
+        <h4 class="text-white font-bold mb-2 text-center">RÉSEAUX SOCIAUX</h4>
+        <div class="flex justify-center">
+          <img src="image/cp.jpeg.png" alt="icônes" class="w-32 h-auto">
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 text-center text-sm text-gray-300">
+      © 2024 TROPICAL CONCEPT. TOUS DROITS RÉSERVÉS
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const burger = document.getElementById("burger");
+    const navMenu = document.getElementById("navMenu");
+    burger.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
+    });
+
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Merci ! Votre message a bien été envoyé.");
+      form.reset();
+    });
+  </script>
+
     
 </body>
 </html>
